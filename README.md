@@ -1,4 +1,10 @@
+# Next.js FastAPI, Postgresqlのスターター
+
+Next.js、FastAPI、PostgresqlでWeb開発したい場合に使う。
+
+
 # バージョン
+
 - frontend
     - Next.js v13.2.4
     - React v18.2.0
