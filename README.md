@@ -1,6 +1,4 @@
-# 開発方法
-
-## バージョン
+# バージョン
 - frontend
     - Next.js v13.2.4
     - React v18.2.0
@@ -12,9 +10,11 @@
 - database
     - Postgresql v15.2
 
+# 開発方法
+
 ### Dockerを起動する
 
-初めはビルドしてから起動、またはリビルドして起動する。
+初めはビルドしてから起動、またはリビルドして起動したい場合。
 
 ```shell
 docker compose up -d --build --force-recreate
@@ -34,7 +34,6 @@ docker compose up -d
 ### Dockerを終わらせる
 
 ```shell
-「シェル
 docker compose down
 ```
 
