@@ -2,7 +2,6 @@
 
 Next.js、FastAPI、PostgresqlでWeb開発したい場合に使う。
 
-
 # バージョン
 
 - frontend
@@ -33,9 +32,10 @@ docker compose up -d
 ```
 
 ### 起動を確認する
-[front](http://localhost:3000)にアクセスして、ページが表示されれば成功。
 
 [health](http://localhost:8000/health)にアクセスして、status:okのJSONが返ってくれば成功。
+
+[front](http://localhost:3000)にアクセスして、ページが表示されれば成功。
 
 ### Dockerを終わらせる
 
