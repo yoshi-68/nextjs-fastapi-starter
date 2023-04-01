@@ -5,13 +5,14 @@ Next.js、FastAPI、PostgresqlでWeb開発したい場合に使う。
 # バージョン
 
 - frontend
+    - Node.js v18.15.0 (Hydrogen)
     - Next.js v13.2.4
     - React v18.2.0
     - TypeScript v5.0.2
 - backend
     - Python v3.11.2
     - FastAPI v^0.94.0
-    - Poetry
+    - Poetry v1.4.1
 - database
     - Postgresql v15.2
 
@@ -33,7 +34,7 @@ docker compose up -d
 
 ### 起動を確認する
 
-[health](http://localhost:8000/health)にアクセスして、status:okのJSONが返ってくれば成功。
+[backend](http://localhost:8000/health)にアクセスして、status:okのJSONが返ってくれば成功。
 
 [front](http://localhost:3000)にアクセスして、ページが表示されれば成功。
 
