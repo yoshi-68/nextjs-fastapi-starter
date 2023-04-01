@@ -9,3 +9,9 @@ npm run dev
 ## 起動を確認する
 
 [front](http://localhost:3000)にアクセスして、ページが表示されれば成功。
+
+## Prettierで整形をする
+
+```shell
+npm run fmt
+```
