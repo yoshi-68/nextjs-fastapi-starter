@@ -1,0 +1,24 @@
+# ビルド成果物やコンパイルされたファイル
+/.next
+/out
+
+# サードパーティのライブラリやコード
+/node_modules
+
+# Prettierがサポートしていないファイル形式
+*.log
+*.svg
+
+# コードフォーマットが不要なファイル
+LICENSE
+README.md
+
+# 環境設定ファイル
+.env
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+.env.test
+.env.test.local
