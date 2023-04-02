@@ -1,13 +1,5 @@
 # 開発方法
 
-## tips
-
-tips: プロジェクトディレクトリ内に仮想環境を作成する。
-
-```shell
-poetry config virtualenvs.in-project true
-```
-
 ## パッケージをインストールする
 
 poetry.lockからパッケージのインストールする。
@@ -56,4 +48,12 @@ alembic revision --autogenerate -m "create users table"
 
 ```shell
 alembic upgrade head
+```
+
+## TIPS
+
+プロジェクトディレクトリ内に仮想環境を作成する。
+
+```shell
+poetry config virtualenvs.in-project true
 ```
