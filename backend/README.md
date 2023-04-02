@@ -40,7 +40,13 @@ pytest
 
 ## データベースのテーブルを追加する
 
-テーブルを追加する。
+`./migrations/env.py`にインポートして、Alembicにモデルを認識させる。
+
+```python
+from models import users  # noqa: F401
+```
+
+マイグレーションスクリプトを作成する。
 
 ```shell
 alembic revision --autogenerate -m "create users table"
