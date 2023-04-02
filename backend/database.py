@@ -13,7 +13,7 @@ SessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=False, bi
 Base = declarative_base()
 
 
-def get_db():
+def get_db():  # type: ignore
     try:
         db = SessionLocal()
         yield db
