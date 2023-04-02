@@ -20,20 +20,13 @@ RUN apt-get -q update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# 新しいユーザーとグループを追加
-RUN groupadd -r appgroup && useradd -r -g appgroup appuser
-RUN mkdir -p /home/appuser && chown -R appuser:appgroup /home/appuser
-
 # アプリケーションをコピー
 WORKDIR /app
 COPY frontend/ /app/
-RUN chown -R appuser:appgroup /app
 
 # Node.jsのパッケージをインストール
 RUN npm update -g npm -s && \
-    npm ci -s
-
-USER appuser
+    npm ci
 
 ENTRYPOINT ["npm"]
 CMD ["run", "dev"]

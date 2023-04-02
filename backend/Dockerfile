@@ -20,21 +20,14 @@ RUN apt-get -q update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# 新しいユーザーとグループを追加
-RUN groupadd -r appgroup && useradd -r -g appgroup appuser
-RUN mkdir -p /home/appuser && chown -R appuser:appgroup /home/appuser
-
 # アプリケーションをコピー
 WORKDIR /app
 COPY backend/ /app/
-RUN chown -R appuser:appgroup /app
 
 # Pythonのパッケージをインストール
 RUN pip install --no-cache-dir --upgrade pip==23.0.1 poetry==1.4.1 -q && \
     poetry config virtualenvs.create false && \
-    poetry install -q
-
-USER appuser
+    poetry install
 
 ENTRYPOINT ["uvicorn"]
 CMD ["main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
