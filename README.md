@@ -36,7 +36,7 @@ docker compose up -d
 
 [backend](http://localhost:8000/health)にアクセスして、status:okのJSONが返ってくれば成功。
 
-[front](http://localhost:3000)にアクセスして、ページが表示されれば成功。
+[frontend](http://localhost:3000)にアクセスして、ページが表示されれば成功。
 
 ### Dockerを終わらせる
 
