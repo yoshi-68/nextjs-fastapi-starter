@@ -49,6 +49,9 @@ alembic revision --autogenerate -m "create users table"
 ```shell
 # SQLを確認する
 alembic upgrade head --sql
+```
+
+```shell
 # データベースに適用する
 alembic upgrade head
 ```
