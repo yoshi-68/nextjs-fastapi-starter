@@ -47,7 +47,16 @@ alembic revision --autogenerate -m "create users table"
 マイグレーションスクリプトをデータベースに適用する。
 
 ```shell
+# SQLを確認する
+alembic upgrade head --sql
+# データベースに適用する
 alembic upgrade head
+```
+
+マイグレーションを1つ前に戻す。
+
+```shell
+alembic downgrade -1
 ```
 
 ## TIPS
