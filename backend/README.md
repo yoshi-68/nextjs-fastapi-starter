@@ -43,7 +43,7 @@ pytest
 テーブルを追加する。
 
 ```shell
-alembic revision -m "create users table"
+alembic revision --autogenerate -m "create users table"
 ```
 
 マイグレーションスクリプトをデータベースに適用する。
