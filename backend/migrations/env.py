@@ -6,7 +6,7 @@ from sqlalchemy import engine_from_config, pool
 from database import Base
 
 # 認識させたいモデルを追加する
-from models import users
+from models import users  # noqa: F401
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -70,8 +70,6 @@ def run_migrations_online() -> None:
         prefix="sqlalchemy.",
         poolclass=pool.NullPool,
     )
-
-    url = config.get_main_option("sqlalchemy.url")
 
     with connectable.connect() as connection:
         context.configure(connection=connection, target_metadata=target_metadata)

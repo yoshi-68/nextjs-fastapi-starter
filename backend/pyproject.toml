@@ -43,7 +43,7 @@ known_local_folder = ['config', ]
 max-line-length = 120
 max-complexity = 18
 ignore = "E203,E266,W503,"
-exclude = ".venv"
+exclude = ".venv, versions"
 
 [tool.mypy]
 python_version = "3.11"
