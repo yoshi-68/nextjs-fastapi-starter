@@ -32,11 +32,19 @@ build-backend = "poetry.core.masonry.api"
 [tool.black]
 target-version = ['py311']
 line-length = 120
+include = '\.py$'
 extend-exclude = '''
-^/migrations/versions
+(
+    ^/migrations
+    | \.idea
+    | \.vscode
+    | \.mypy_cache
+    | \.pytest_cache
+)
 '''
 
 [tool.isort]
+profile = "black"
 line_length = 120
 multi_line_output = 3
 include_trailing_comma = true
