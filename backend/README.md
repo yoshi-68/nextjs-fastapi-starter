@@ -62,6 +62,10 @@ alembic upgrade head
 alembic downgrade -1
 ```
 
+## 環境変数の追加
+
+環境変数を追加する場合は、.env.exampleに追加すること。
+
 ## TIPS
 
 プロジェクトディレクトリ内に仮想環境を作成する。
