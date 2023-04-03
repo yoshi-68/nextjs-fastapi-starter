@@ -1,8 +1,19 @@
-.vscode
-.idea
+# OS and IDE files
 .DS_Store
 Thumbs.db
-env
+
+# Python files
 __pycache__/
+*.pyc
+
+# Testing files
 .pytest_cache/
 .mypy_cache/
+
+# Environment variables
+.env
+.env.local
+
+# IDE settings
+.vscode
+.idea
