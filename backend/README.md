@@ -62,9 +62,11 @@ alembic upgrade head
 alembic downgrade -1
 ```
 
-## 環境変数の追加
+## 環境変数
 
-環境変数を追加する場合は、.env.exampleに追加すること。
+ローカルで開発する際は、`.env.example`をコピーして、`.env`を作成すること。
+
+環境変数を追加する場合は、`.env.example`に追加すること。
 
 ## TIPS
 
