@@ -4,7 +4,6 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from database import Base, database_uri
-
 # 認識させたいモデルを追加する
 from models import users  # noqa: F401
 
