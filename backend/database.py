@@ -1,4 +1,5 @@
 import os
+from typing import Generator
 
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
@@ -28,7 +29,7 @@ SessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=False, bi
 Base = declarative_base()
 
 
-def get_db():  # type: ignore
+def get_db() -> Generator:
     try:
         db = SessionLocal()
         yield db
