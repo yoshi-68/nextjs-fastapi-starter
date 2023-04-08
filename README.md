@@ -11,8 +11,9 @@ Next.js、FastAPI、PostgresqlでWeb開発したい場合に使う。
     - TypeScript v5.0.2
 - backend
     - Python v3.11.2
-    - FastAPI v^0.94.0
     - Poetry v1.4.1
+    - FastAPI v^0.94.0
+    - Alembic v1.10.2
 - database
     - Postgresql v15.2
 
