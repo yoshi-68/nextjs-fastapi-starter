@@ -1,5 +1,11 @@
 # 開発方法
 
+## 環境変数
+
+ローカルで開発する際は、`.env.example`をコピーして、`.env`を作成すること。
+
+環境変数を追加する場合は、`.env.example`に追加すること。
+
 ## パッケージをインストールする
 
 poetry.lockからパッケージのインストールする。
@@ -61,12 +67,6 @@ alembic upgrade head
 ```shell
 alembic downgrade -1
 ```
-
-## 環境変数
-
-ローカルで開発する際は、`.env.example`をコピーして、`.env`を作成すること。
-
-環境変数を追加する場合は、`.env.example`に追加すること。
 
 ## TIPS
 
