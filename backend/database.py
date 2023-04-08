@@ -4,7 +4,7 @@ from typing import Generator
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy.orm import Session, scoped_session, sessionmaker
 
 # 環境変数からデータベースのURIを生成する
 load_dotenv()
@@ -29,7 +29,7 @@ SessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=False, bi
 Base = declarative_base()
 
 
-def get_db() -> Generator:
+def get_db() -> Generator[Session, None, None]:
     try:
         db = SessionLocal()
         yield db
