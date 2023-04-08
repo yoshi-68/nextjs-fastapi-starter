@@ -1,4 +1,5 @@
 import os
+from contextlib import contextmanager
 from typing import Generator
 
 from dotenv import load_dotenv
@@ -29,6 +30,7 @@ SessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=False, bi
 Base = declarative_base()
 
 
+@contextmanager
 def get_db() -> Generator[Session, None, None]:
     try:
         db = SessionLocal()
