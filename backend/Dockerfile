@@ -1,3 +1,5 @@
+# syntax = docker/dockerfile:1.5
+
 FROM python:3.11.2-slim-buster
 
 # メタデータを設定

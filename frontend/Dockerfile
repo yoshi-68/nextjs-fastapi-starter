@@ -1,3 +1,5 @@
+# syntax = docker/dockerfile:1.5
+
 FROM node:hydrogen-buster-slim
 
 # メタデータを設定
