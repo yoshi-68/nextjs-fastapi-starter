@@ -22,15 +22,15 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
-# アプリケーションをコピー
+# Node.jsのパッケージをインストール
 WORKDIR /app
 COPY frontend/package.json frontend/package-lock.json /app/
 
-# Node.jsのパッケージをインストール
 RUN --mount=type=cache,target=/root/.npm npm \
     update -g npm -s && \
     npm ci
 
+# アプリケーションをコピー
 COPY frontend/ /app/
 
 ENTRYPOINT ["npm"]

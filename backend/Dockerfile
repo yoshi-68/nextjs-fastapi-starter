@@ -22,16 +22,16 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
-# アプリケーションをコピー
+# Pythonのパッケージをインストール
 WORKDIR /app
 COPY backend/pyproject.toml backend/poetry.lock /app/
 
-# Pythonのパッケージをインストール
 RUN --mount=type=cache,target=/root/.cache/pypoetry \
     pip install --no-cache-dir --upgrade pip==23.0.1 poetry==1.4.1 -q && \
     poetry config virtualenvs.create false && \
     poetry install
 
+# アプリケーションをコピー
 COPY backend/ /app/
 
 ENTRYPOINT ["uvicorn"]
