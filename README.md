@@ -21,6 +21,8 @@ Next.js、FastAPI、PostgresqlでWeb開発したい場合に使う。
 
 ### Dockerを起動する
 
+BuildKitを有効にすること。
+
 初めはビルドしてから起動、またはリビルドして起動したい場合。
 
 ```shell
