@@ -24,11 +24,14 @@ RUN apt update && \
 
 # アプリケーションをコピー
 WORKDIR /app
-COPY frontend/ /app/
+COPY frontend/package.json frontend/package-lock.json /app/
 
 # Node.jsのパッケージをインストール
-RUN npm update -g npm -s && \
+RUN --mount=type=cache,target=/root/.npm npm \
+    update -g npm -s && \
     npm ci
+
+COPY frontend/ /app/
 
 ENTRYPOINT ["npm"]
 CMD ["run", "dev"]
